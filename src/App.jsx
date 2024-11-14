@@ -1,15 +1,23 @@
+import {Component} from 'react';
+import Wrapper from './components/Wrapper';
 
-function App() {
+class App extends Component {
+    constructor(props){
+        super(props);
+    }
 
-    return (
-        <>
-            <div>
-                <h1>
-                    Jai Shree Ram
-                </h1>
-            </div>
-        </>
-    )
+
+    render(){
+        return(
+            <>
+                <div className="wrapper">
+                    <Wrapper/>
+                </div>
+            </>
+        )
+    }
 }
+
+
 
 export default App
