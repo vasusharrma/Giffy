@@ -1,5 +1,8 @@
 
-const Buttons = ({toggleBtn , setToggleBtn}) => {
+const Buttons = (props) => {
+
+   const {toggleBtn , setToggleBtn , gifValue , setGifValue} = props;
+
   return (
     <div className="buttonSection">
       <button className={"buttonSection_inside"} onClick={() => {
@@ -9,7 +12,11 @@ const Buttons = ({toggleBtn , setToggleBtn}) => {
       <input
         className={"buttonSection_inside"}
         type="text"
+        value={gifValue}
         placeholder={"Search for...."}
+        onChange = {(e)=>{
+           setGifValue(e.target.value);
+        }}
       />
     </div>
   );

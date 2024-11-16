@@ -4,11 +4,12 @@ import { useState } from "react";
 
 const Wrapper = () => {
   const [toggleBtn, setToggleBtn] = useState(true);
+  const [gifValue , setGifValue] = useState("");
 
   return (
     <>
-      <Img_Section toggleBtn={toggleBtn} />
-      <Buttons setToggleBtn={setToggleBtn} toggleBtn={toggleBtn} />
+      <Img_Section toggleBtn={toggleBtn} gifValue={gifValue} />
+      <Buttons setToggleBtn={setToggleBtn} toggleBtn={toggleBtn} gifValue={gifValue} setGifValue={setGifValue} />
     </>
   );
 };
