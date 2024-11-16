@@ -1,8 +1,7 @@
-# React + Vite
+# Wanted to Start with npm parcel 
+# BUT ENDED UP WITH NPM VITE@LATES
+- while i was trying to igniting my react app with parcel there i was getting a error
+- so after strugling for a while i move on to the , one command ignition
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# HERE I MADE A CUSTOM HOOK NAME AS useRandomGif 
+- that have all the dependency of fetching the data for random gifs as well as for a type of gif
