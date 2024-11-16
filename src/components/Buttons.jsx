@@ -1,21 +1,18 @@
-import {Component} from 'react';
 
-class Wrapper extends Component {
+const Buttons = ({toggleBtn , setToggleBtn}) => {
+  return (
+    <div className="buttonSection">
+      <button className={"buttonSection_inside"} onClick={() => {
+          (toggleBtn == true)?setToggleBtn(false):setToggleBtn(true);
+          console.log(toggleBtn);
+      }}>Randomize</button>
+      <input
+        className={"buttonSection_inside"}
+        type="text"
+        placeholder={"Search for...."}
+      />
+    </div>
+  );
+};
 
-
-    constructor(props){
-        super(props);
-    }
-
-    render(){
-        return(
-            <div className="buttonSection">
-                <button>Randomize</button>
-                <input type="text" placeholder={'Search for....'}/>
-            </div>
-        )
-    }
-
-}
-
-export default Wrapper
+export default Buttons;

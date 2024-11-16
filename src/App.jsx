@@ -1,23 +1,20 @@
-import {Component} from 'react';
-import Wrapper from './components/Wrapper';
+import { Component } from "react";
+import Wrapper from "./components/Wrapper";
 
 class App extends Component {
-    constructor(props){
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
 
-
-    render(){
-        return(
-            <>
-                <div className="wrapper">
-                    <Wrapper/>
-                </div>
-            </>
-        )
-    }
+  render() {
+    return (
+      <>
+        <div className="wrapper">
+          <Wrapper />
+        </div>
+      </>
+    );
+  }
 }
 
-
-
-export default App
+export default App;

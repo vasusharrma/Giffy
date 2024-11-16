@@ -1,21 +1,16 @@
-import {Component} from 'react';
-import Img_Section from './Img_Section.jsx';
-import Buttons from './Buttons.jsx';
+import Img_Section from "./Img_Section.jsx";
+import Buttons from "./Buttons.jsx";
+import { useState } from "react";
 
-class Wrapper extends Component {
-    constructor(props){
-        super(props);
-    }
+const Wrapper = () => {
+  const [toggleBtn, setToggleBtn] = useState(true);
 
-    render(){
-        return(
-            <>
-                <Img_Section/>
-                <Buttons/>
-            </>
-        )
-    }
+  return (
+    <>
+      <Img_Section toggleBtn={toggleBtn} />
+      <Buttons setToggleBtn={setToggleBtn} toggleBtn={toggleBtn} />
+    </>
+  );
+};
 
-}
-
-export default Wrapper
+export default Wrapper;
