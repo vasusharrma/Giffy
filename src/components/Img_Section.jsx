@@ -1,32 +1,11 @@
-import { useState, useEffect } from "react";
-import API_Key from "../utils/API_key.js";
-import axios from "axios";
 import {RiseLoader} from "react-spinners";
+import useRandomGif from "../customHooks/useRandomGif.jsx";
 
-const Img_Section = ({ toggleBtn, gifValue }) => {
-  const [gitUrl, setGitUrl] = useState(null);
+const Img_Section = ({ toggleBtn, gifValue , setGifValue }) => {
+
+  const gitUrl = useRandomGif(toggleBtn , setGifValue, gifValue);
 
 
-  const fetchedData = async () => {
-    const url = `https://api.giphy.com/v1/gifs/random?api_key=${API_Key}`;
-    const gotUrl = await axios.get(url);
-    console.log(gotUrl);
-    setGitUrl(gotUrl?.data?.data?.images?.downsized?.url);
-  };
-  const fetchedDataInput = async () =>{
-    const url = `https://api.giphy.com/v1/gifs/random?api_key=${API_Key}&q=${gifValue}`;
-    const gotUrl = await axios.get(url);
-    setGitUrl(gotUrl?.data?.data?.images?.downsized?.url);
-  }
-
-  useEffect(() => {
-    fetchedData();
-    console.log(toggleBtn);
-  }, [toggleBtn]);
-
-  useEffect(()=>{
-    fetchedDataInput();
-  },[gifValue])
 
   if (gitUrl == null) {
     return (

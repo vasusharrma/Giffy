@@ -8,7 +8,7 @@ const Wrapper = () => {
 
   return (
     <>
-      <Img_Section toggleBtn={toggleBtn} gifValue={gifValue} />
+      <Img_Section toggleBtn={toggleBtn} gifValue={gifValue} setGifValue={setGifValue}/>
       <Buttons setToggleBtn={setToggleBtn} toggleBtn={toggleBtn} gifValue={gifValue} setGifValue={setGifValue} />
     </>
   );
